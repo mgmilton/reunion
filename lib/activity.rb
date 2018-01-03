@@ -19,8 +19,8 @@ class Activity
 
   def payment_calculator(person)
     argument_raiser(person)
-    if @participants[person].nil?
-      0
+    case @participants[person]
+    when nil then 0
     else
       cost_splitter - @participants[person]
     end
