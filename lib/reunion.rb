@@ -1,5 +1,4 @@
 require './lib/activity.rb'
-require 'erb'
 class Reunion
   attr_reader :location, :activities
 
