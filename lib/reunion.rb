@@ -1,4 +1,5 @@
 require './lib/activity.rb'
+require 'erb'
 class Reunion
   attr_reader :location, :activities
 
@@ -26,16 +27,6 @@ class Reunion
     @activities.reduce(0) do |total_owed, activity|
       total_owed += activity.payment_calculator(participant)
       total_owed
-    end
-  end
-
-  def create_website(form_letter)
-    Dir.mkdir("website") unless Dir.exists? "website"
-
-    filename = "website/reunion_details.html"
-
-    File.open(filename, 'w') do |file|
-      file.puts form_letter
     end
   end
 

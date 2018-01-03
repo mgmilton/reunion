@@ -13,18 +13,22 @@
         |||||    |||||       |||||<br>
         ~~~~~    ~~~~~       ~~~~~ </p>
   <table>
-    <% if activities.kind_of?(Array) %>
+    
       <th>Activity</th><th>Players</th><th>Dead Presidents</th>
-        <% activities.each do |activity| %>
+        
         <tr>
-          <td><%= " #{activity.name}" %></td>
-          <td><%= "#{activity.participants.keys.join(" ")}" %></td>
-          <td><%= "#{activity.total_cost}" %></td>
+          <td> Ice Fishing</td>
+          <td>Farve McCarthy</td>
+          <td>50</td>
         </tr>
-      <% end %>
-    <% else %>
-      <th></th>
-    <% end %>
+      
+        <tr>
+          <td> Slamming Brews</td>
+          <td>Dwight Shawna Gus</td>
+          <td>40</td>
+        </tr>
+      
+    
   </table>
 </pre>
 </body>
