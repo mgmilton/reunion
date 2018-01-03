@@ -52,7 +52,7 @@
         <% activities.each do |activity| %>
         <tr>
           <td><%= " #{activity.name}" %></td>
-          <td><%= "#{activity.participants.keys.join(" ")}" %></td>
+          <td><%= "#{activity.participants.keys.join(", ")}" %></td>
           <td><%= "#{activity.total_cost}" %></td>
         </tr>
       <% end %>
