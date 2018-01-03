@@ -20,7 +20,21 @@ class Activity
   def payment_calculator(person)
     argument_raiser(person)
     cost_splitter - @participants[person]
+
+    #@participants.merg(@particpants) do |key, value|
+    #split_costs - value
+    #end
+
+    # @participants.transform_values |amount|
+    # split_costs - value
+    # end
   end
+
+  # if assuming cost is sum of participants cash added
+  # issue with not making this assumption, is the total cost of a event might not be met by the participants cash added
+  # def total_cost
+  #   @participants.values.sum
+  # end
 
   def argument_raiser(data_type, desired_class = String)
     if data_type.class != desired_class

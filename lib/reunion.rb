@@ -1,4 +1,5 @@
 require './lib/activity.rb'
+require 'erb'
 class Reunion
   attr_reader :location, :activities
 
@@ -24,7 +25,11 @@ class Reunion
   def debt_collector(participant)
     argument_raiser(participant)
     @activities.reduce(0) do |total_owed, activity|
-      total_owed += activity.payment_calculator(participant)
+      if activity.participants[participant] == nil
+        total_owed += 0
+      else
+        total_owed += activity.payment_calculator(participant)
+      end
       total_owed
     end
   end

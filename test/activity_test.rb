@@ -13,7 +13,7 @@ class ActivityTest < Minitest::Test
   end
 
   def test_add_participants_increases_particpants
-    assert_equal 20, @activity.add_participant("buzz", 20 )
+    assert_equal 20, @activity.add_participant("buzz", 20)
 
     assert_equal 1, @activity.participants.length
   end
