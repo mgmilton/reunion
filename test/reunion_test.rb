@@ -32,10 +32,10 @@ class ReunionTest < Minitest::Test
   end
 
   def test_debt_collector_returns_particpants_debt
-    @reunion.add_activity("badminton",{"buzz" => 15, "wall-e" => 30}, 30)
+    @reunion.add_activity("badminton",{"buzz" => 15, "wall-e" => 30, "woody" => 8}, 30)
     @reunion.add_activity("ice fishing", {"buzz" => 15, "wall-e" => 40}, 40)
 
-    assert_equal 5, @reunion.debt_collector("buzz")
+    assert_equal 2, @reunion.debt_collector("woody")
   end
 
   def test_debt_collector_only_accepts_strings

@@ -19,8 +19,11 @@ class Activity
 
   def payment_calculator(person)
     argument_raiser(person)
-    cost_splitter - @participants[person]
-
+    if @participants[person].nil?
+      0
+    else
+      cost_splitter - @participants[person]
+    end
     #@participants.merg(@particpants) do |key, value|
     #split_costs - value
     #end
