@@ -1,0 +1,21 @@
+<html>
+<head>
+  <meta charset='utf-8'>
+  <title>Thank You!</title>
+</head>
+<body>
+  <h1>Thanks <%= name %></h1>
+  <p>Thanks for coming to our reunion! We plan on getting smashed and eating bratwurts!</p>
+
+  <table>
+    <th>Name</th><th>Website</th>
+    <% activities.each do |activity| %>
+    <tr>
+      <td><%= "What we doing: #{activity}" %></td>
+      <td><%= "Who doing it: #{activity.participants}" %></td>
+      <td><%= "How much it'll cost ya: #{activity}" %></td>
+    </tr>
+    <% end %>
+  </table>
+</body>
+</html>
